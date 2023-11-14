@@ -64,8 +64,11 @@ session_start();
                 }
                 ?>
         <a href="logout.php"><button type="button">Log Out</button></a>
-        <p><a href="change_username.php">Change Username</a></p>
-        <p><a href="change_password.php">Change Password</a></p>
+        <a href="change_username.php"><button type="button">Change Username</button></a>
+        <a href="change_password.php"><button type="button">Change Password</button></a>
+        <a href="delete_account.php"><button type="button">Delete Account</button></a>
+        <a href="upload_image.php"><button type="button">Upload Image</button></a>
+        <a href="admin_panel.php"><button type="button">Admin Panel</button></a>
         </div>
     </section>
 </body>

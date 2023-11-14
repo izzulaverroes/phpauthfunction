@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $resultUpdatePassword = $conn->query($sqlUpdatePassword);
 
         if ($resultUpdatePassword) {
-            echo "Password updated successfully.";
+            echo "<script>alert('Password updated successfully.')</script>";
+            header("Location: dashboard.php"); 
         } else {
             echo "Error updating password: " . $conn->error;
         }

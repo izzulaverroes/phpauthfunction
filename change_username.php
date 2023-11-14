@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         echo "Username updated successfully.";
         $_SESSION["username"] = $newUsername; // Update the session variable
+        header("Location: dashboard.php");
     } else {
         echo "Error updating username: " . $conn->error;
     }

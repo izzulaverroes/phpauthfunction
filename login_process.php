@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["username"] = $username;
         header("Location: dashboard.php"); // Redirect to a dashboard page or home page after successful login
     } else {
-        echo "Invalid username or password";
+        echo "<script>alert('Invalid username or password')</script>";
+        header("Location: login.php");
     }
 }
 
