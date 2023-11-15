@@ -56,3 +56,38 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#tetris-container {
+    position: relative;
+    display: inline-block;
+}
+
+#game-board {
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    border: 2px solid #333;
+    width: 300px; /* Adjust the width if needed */
+    height: 600px; /* Adjust the height if needed */
+}
+
+.piece {
+    background-color: #3498db;
+}
+
+.taken {
+    background-color: #2ecc71;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 18px;
+}
