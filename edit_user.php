@@ -21,7 +21,7 @@ $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 $user_id = $_GET['id'];
 
 // Query to get user data by ID (adjust the query according to your database structure)
-$query = "SELECT * FROM DB_USERSDATA WHERE id = :id";
+$query = "SELECT * FROM USERSDATA WHERE id = :id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(":id", $user_id);
 $stmt->execute();
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newEmail = $_POST['new_email'];
 
     // Query to update user data (adjust the query according to your database structure)
-    $updateQuery = "UPDATE DB_USERSDATA SET username = :username, email = :email WHERE id = :id";
+    $updateQuery = "UPDATE USERSDATA SET username = :username, email = :email WHERE id = :id";
     $updateStmt = $conn->prepare($updateQuery);
     $updateStmt->bindParam(":username", $newUsername);
     $updateStmt->bindParam(":email", $newEmail);

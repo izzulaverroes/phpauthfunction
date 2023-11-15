@@ -20,7 +20,7 @@ $password = "eTNIzLyGbE";
 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 // Query to get all users (adjust the query according to your database structure)
-$query = "SELECT * FROM DB_USERSDATA";
+$query = "SELECT * FROM USERSDATA";
 $stmt = $conn->query($query);
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -50,11 +50,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tbody>
                     <?php foreach ($users as $user): ?>
                         <tr>
-                            <td><?= isset($user['USERNAME']) ? $user['USERNAME'] : 'N/A'; ?></td>
-                            <td><?= isset($user['EMAIL']) ? $user['EMAIL'] : 'N/A'; ?></td>
+                            <td><?= isset($user['username']) ? $user['username'] : 'N/A'; ?></td>
+                            <td><?= isset($user['email']) ? $user['email'] : 'N/A'; ?></td>
                             <td>
-                                <a href="edit_user.php?id=<?= $user['USERNAME']; ?>">Edit</a>
-                                <a href="delete_user.php?id=<?= $user['USERNAME']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                                <a href="edit_user.php?id=<?= $user['id']; ?>">Edit</a>
+                                <a href="delete_user.php?id=<?= $user['id']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

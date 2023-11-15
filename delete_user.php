@@ -18,12 +18,12 @@ $password = "eTNIzLyGbE";
 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 // Retrieve the user ID from the URL parameter
-$user_id = $_GET['USERNAME'];
+$user_id = $_GET['id'];
 
 // Query to delete the user by ID (adjust the query according to your database structure)
-$deleteQuery = "DELETE FROM DB_USERSDATA WHERE USERNAME = :USERNAME";
+$deleteQuery = "DELETE FROM USERSDATA WHERE id = :id";
 $deleteStmt = $conn->prepare($deleteQuery);
-$deleteStmt->bindParam(":USERNAME", $user_id);
+$deleteStmt->bindParam(":id", $user_id);
 $deleteStmt->execute();
 
 // Redirect to the admin panel after deleting
