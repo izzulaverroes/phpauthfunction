@@ -39,12 +39,12 @@ session_start();
                         $userData = $result->fetch_assoc();
 
                         // Check if the keys exist before trying to access them
-                        $email = isset($userData["EMAIL"]) ? $userData["EMAIL"] : "N/A";
-                        $displayName = isset($userData["DISPLAY_NAME"]) ? $userData["DISPLAY_NAME"] : "N/A";
-                        $password = isset($userData["PASSWORD"]) ? $userData["PASSWORD"] : "N/A";
-                        $image = isset($userData["IMAGE"]) ? $userData["IMAGE"] : "N/A";
-                        $gender = isset($userData["GENDER"]) ? $userData["GENDER"] : "N/A";
-                        $born = isset($userData["BORN"]) ? $userData["BORN"] : "N/A";
+                        $email = isset($userData["email"]) ? $userData["email"] : "N/A";
+                        $displayName = isset($userData["display_name"]) ? $userData["display_name"] : "N/A";
+                        $password = isset($userData["password"]) ? $userData["password"] : "N/A";
+                        $image = isset($userData["image"]) ? $userData["image"] : "N/A";
+                        $gender = isset($userData["gender"]) ? $userData["gender"] : "N/A";
+                        $born = isset($userData["born"]) ? $userData["born"] : "N/A";
 
                         echo "<p>Email: " . $email . "</p>";
                         echo "<p>Display Name: " . $displayName . "</p>";

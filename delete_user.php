@@ -1,13 +1,11 @@
 <?php
 session_start();
 
-// Check if the user is logged in as an admin
-// if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
-//     // Redirect to the login page if not logged in
-//     header("Location: index.php");
-//     exit();
-// }
-
+if (!isset($_SESSION["admin"]) || $_SESSION["admin"] != "1") {
+    // Redirect to the login page if not logged in
+    header("Location: login.php");
+    exit();
+}
 // Database connection details
 $host = "sql12.freesqldatabase.com";
 $dbname = "sql12662040";
